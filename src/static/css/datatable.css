@@ -1,0 +1,75 @@
+table.dataTable thead th {
+  background-color: #d9a341;
+  text-align: center;
+  color: #451A0F
+}
+
+table.dataTable a {
+  color: black;
+}
+
+
+/* Round Corner for TOP LEFT COLUMN */
+
+table thead tr:first-child  th:first-child
+{
+    border-top-left-radius: 15px;
+}
+
+/* Round Corner for TOP RIGHT COLUMN */
+
+table thead tr:first-child  th:last-child
+{
+    border-top-right-radius: 15px;
+}
+
+/* Round Corner for BOTTOM LEFT COLUMN */
+
+table tbody tr:last-child td:first-child
+{
+    border-bottom-left-radius: 15px;
+}
+
+/* Round Corner for BOTTOM RIGHT COLUMN */
+
+table tbody tr:last-child td:last-child
+{
+    border-bottom-right-radius: 15px;
+}
+
+.dataTables_filter input {
+  color: white !important;
+}
+
+.dataTables_wrapper .dataTables_paginate{
+    color:white;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: #d9a341;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: #d9a341;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+    background: rgba(217, 163, 65, 0.7);
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled{
+    background: rgba(217, 163, 65, 0.7);
+    color: white !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+    background: rgba(217, 163, 65, 1);
+    color: white !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover{
+    background: rgba(217, 163, 65, 1);
+    color: white !important;
+}
+
+.dataTables_wrapper .dataTables_length {
+    color: white;
+}

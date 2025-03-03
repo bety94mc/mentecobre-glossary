@@ -1,0 +1,68 @@
+{% extends "../base/base.html" %}
+
+{% block content %}
+<div id="content-wrapper" class="d-flex flex-column">
+<h1 class="text-coppermind-yellow title_pages_coppermind text-center">SACAR CAMBIOS MENSUALES</h1>
+    <div class="container centered">
+      <div class="row">
+        <div class="col-4">
+            <div class="card" style="background-color: rgba(218, 233, 247, 0.5)">
+               <div class="card-header bg-coppermind-yellow" id="headingcambios">
+                  <h5 class="mb-0 text-coppermind-dark">
+                      Sacar cambios
+                  </h5>
+               </div>
+               <div class="card-body">
+                   <form method="POST" id="form-copper-changes">
+                       {% csrf_token %}
+                       {{form_changes.as_p }}
+                       <input name="form-copper-changes" type="submit" value="Descargar" class="assign-button">
+                   </form>
+               </div>
+            </div>
+        </div >
+        <div class="col-4">
+            <div class="card" style="background-color: rgba(218, 233, 247, 0.5)">
+               <div class="card-header bg-coppermind-yellow" id="headingcambiosextraer">
+                  <h5 class="mb-0 text-coppermind-dark">
+                      Extraer cambios
+                  </h5>
+               </div>
+               <div class="card-body">
+                   <form method="POST" id="form-copper-changes-excel">
+                       {% csrf_token %}
+                       <input name="form-copper-changes-excel" type="submit" value="En Excel" class="assign-button" style="margin-bottom: 20px">
+                   </form>
+
+                   <form method="POST" id="form-copper-changes-trello">
+                       {% csrf_token %}
+                       <input name="form-copper-changes-trello" type="submit" value="En Trello" class="assign-button">
+                   </form>
+
+               </div>
+            </div>
+        </div >
+        <div class="col-4">
+            <div class="card"  style="background-color: rgba(218, 233, 247, 0.5)">
+           <div class="card-header bg-coppermind-yellow" id="headinglists">
+                <h5 class="mb-0 text-coppermind-dark">
+                      Sacar Listados de la Coppermind
+                </h5>
+             </div>
+           <div class="card-body">
+                <form method="POST" id="form-copper-list">
+                       {% csrf_token %}
+                       {{form_copperlist.as_p }}
+                       <input name="form-copper-list" type="submit" value="Sacar listado" class="assign-button">
+               </form>
+           </div>
+         </div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
